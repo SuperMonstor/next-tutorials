@@ -6,12 +6,10 @@ import Image from "next/image"
 
 const Logo = () => {
 	return (
-		<Link href="/">
-			<div>
-				<AspectRatio
-					ratio={16 / 9}
-					className="flex items-center justify-center"
-				>
+		// prefetch the page before it is clicked
+		<Link href="/" prefetch={false} className="overflow-hidden">
+			<div className="flex items-center w-20 p-4">
+				<AspectRatio ratio={1 / 1} className="flex items-center justify-center">
 					<Image
 						priority
 						src={LogoImage}
