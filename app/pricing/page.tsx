@@ -1,4 +1,4 @@
-import PricingCard from "@/components/PricingCard"
+import PricingCards from "@/components/PricingCard"
 import React from "react"
 
 const page = () => {
@@ -10,11 +10,12 @@ const page = () => {
 						Pricing
 					</h2>
 					<p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-						The right price for you, {" "}
+						The right price for you,{" "}
 						<br className="hidden sm:inline lg:hidden" />
 						whoever you are
 					</p>
 				</div>
+				siddharth07sid@gmail.com
 				<div className="relative mt-6">
 					<p className="mx-auto max-w-2xl text-lg leading-8 text-white/60">
 						We&apos;re 99% sure we have a plan to match 100% of your needs
@@ -40,10 +41,11 @@ const page = () => {
 				</div>
 			</div>
 			<div className="flow-root bg-white pb-24 sm:pb-32">
-				<div className="-mt-80"><PricingCard redirect={true}  /></div>
+				<div className="-mt-80">
+					<PricingCards redirect={true} />
+				</div>
 			</div>
 		</div>
 	)
 }
-
 export default page
