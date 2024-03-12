@@ -8,7 +8,7 @@ import Link from "next/link"
 import { MessageSquareIcon } from "lucide-react"
 import CreateChatButton from "./CreateChatButton"
 
-const Header =  async () => {
+const Header = async () => {
 	const session = await getServerSession(authOptions)
 	return (
 		<header className="sticky top-0 z-50 bg-white dark:bg-gray-900">
@@ -20,8 +20,7 @@ const Header =  async () => {
 					{/* Session && {} */}
 					{session ? (
 						<>
-						 {'// to prevent additional reads/writes turn off prefetch'}
-							<Link href={"/chat"} prefetch={false}> 
+							<Link href={"/chat"} prefetch={false}>
 								<MessageSquareIcon className="text-black dark:text-white" />
 							</Link>
 							<CreateChatButton />
@@ -30,7 +29,7 @@ const Header =  async () => {
 						<Link href="/pricing">Pricing</Link>
 					)}
 					<DarkModeToggle />
-					<UserButton session={session}/>
+					<UserButton session={session} />
 				</div>
 			</nav>
 			{/* Upgrade Banner */}
